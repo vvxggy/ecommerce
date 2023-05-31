@@ -9,7 +9,10 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="">
+			<?php include get_template_directory() . '/assets/modulos/modulo-productos/loop-productos.php';?>
+	</div>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
@@ -28,7 +31,7 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
+		
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php
